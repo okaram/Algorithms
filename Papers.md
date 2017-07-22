@@ -1,5 +1,6 @@
-= Some Papers
+# Some Papers
 
-== Trees
+## Trees
 
-* Self-Adjusting Binary Search Trees - https://www.cs.cmu.edu/~sleator/papers/self-adjusting.pdf - Splay trees
+* [Self-Adjusting Binary Search Trees](https://www.cs.cmu.edu/~sleator/papers/self-adjusting.pdf) - Splay trees
+
