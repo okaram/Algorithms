@@ -9,7 +9,7 @@
 
 ## Hashing
 * [Cool and practical alternative to hasing](http://www.ru.is/faculty/ulfar/CuckooHash.pdf)
-*[Lecture 13: Hash tables](http://www.cs.cornell.edu/courses/cs3110/2014fa/lectures/13/lec13.html)
+* [Lecture 13: Hash tables](http://www.cs.cornell.edu/courses/cs3110/2014fa/lectures/13/lec13.html)
 ## Others
 
 * [On the Efficiency of Pairing Heaps and Related Data
