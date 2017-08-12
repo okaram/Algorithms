@@ -1,0 +1,31 @@
+= Why study algorithms ?
+
+- You will learn many standard algorithms
+- You will become better at solving programming problems
+- Great for job interviews !!
+
+== Standard algorithms
+
+- Will review basic data structures (vectors/lists, trees, hash tables)
+- Will review well-known algorithms (sorting etc)
+- Will *really* learn graphs and graph algorithms
+- Other more advanced ones
+    - flow
+    - probabilistic
+
+== Problem solving
+
+- Will learn techniques for solving problems and coming up with algorithms
+- Divide and Conquer
+- Greedy
+- Dynamic programming
+
+== Job interviews
+
+- Most use some algorithmic problems
+- May end up with one you know
+- Will have more problems you know
+- Will have techniques for coming up with solutions
+- Some sites
+    - https://leetcode.com/
+    - https://www.hackerrank.com/
