@@ -10,7 +10,8 @@
 * [Self-Adjusting Binary Search Trees](https://www.cs.cmu.edu/~sleator/papers/self-adjusting.pdf) - Splay trees
 * [Left-leaning Red-Black Trees](https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf)
 * [Multidimensional Access Methods](http://web.eecs.umich.edu/~jag/eecs584/papers/multidim_index.pdf)
-
+*[Optimizing Hash-Array Mapped Tries for
+Fast and Lean Immutable JVM Collections](https://michael.steindorfer.name/publications/oopsla15.pdf)
 
 ## Hashing
 * [Cool and practical alternative to hasing](http://www.ru.is/faculty/ulfar/CuckooHash.pdf)
