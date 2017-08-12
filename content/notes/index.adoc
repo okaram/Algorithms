@@ -1,0 +1,5 @@
+= Materials
+
+* link:Syllabus.html[Syllabus]
+* link:DataStructuresReview.html[Data Structures Review]
+* link:WhyThisClass.html[Why study algorithms]

@@ -6,12 +6,12 @@
 
 == Standard algorithms
 
-- Will review basic data structures (vectors/lists, trees, hash tables)
-- Will review well-known algorithms (sorting etc)
-- Will *really* learn graphs and graph algorithms
-- Other more advanced ones
-    - flow
-    - probabilistic
+* Will review basic data structures (vectors/lists, trees, hash tables)
+* Will review well-known algorithms (sorting etc)
+* Will *really* learn graphs and graph algorithms
+* Other more advanced ones
+    ** flow
+    ** probabilistic
 
 == Problem solving
 
@@ -27,5 +27,7 @@
 - Will have more problems you know
 - Will have techniques for coming up with solutions
 - Some sites
-    - https://leetcode.com/
-    - https://www.hackerrank.com/
+    ** https://www.codeeval.com/
+    ** https://leetcode.com/
+    ** https://www.hackerrank.com/
+    ** https://programmingpraxis.com/

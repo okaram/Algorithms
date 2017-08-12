@@ -1,0 +1,48 @@
+= Review - Data Structures
+:sourcedir: /Users/curri/IntroJava/Samples/src/main/java/okaram/notes
+:source-highlighter: pygments
+
+== Linear Data Structures
+
+* By Implementation
+    ** Linked list
+    ** Vector
+* By use
+    ** Stack
+    ** Queue
+    ** Dequeue
+    ** Priority queue is implemented with tree-like structures
+* More complicated ones
+    * Skip lists
+
+=== Linked lists
+
+[source,java]
+----
+class LinkedList<T> {
+    private static class Node<T> {
+        T data;
+        Node next;
+    }
+    
+}
+----
+=== Vectors
+
+=== Stack
+
+=== Queue, Circular queue
+
+=== Priority queues and heaps
+
+== Trees
+
+== Searching structures
+
+* Binary Search Trees
+    ** Balancing
+        *** 2-3 Trees
+        *** Red-Black Trees
+        *** AVL Trees
+* Hash tables
+* Multidimensional trees, tables
