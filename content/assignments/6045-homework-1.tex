@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{exsheets}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\title{CS-6045 Homework 1 (ch 1 and 2)}
+\author{Orlando Karam}
+\SetupExSheets{headings=block-subtitle}
+\begin{document}
+\maketitle
+
+\begin{question}[subtitle={Tardos, ch 2 ex 1}]{30}
+Suppose you have algorithms with the five running times listed below. (Assume these are the exact running times.) How much slower do each of these algorithms get when you (a) double the input size, or (b) increase the input size by one?
+\begin{enumerate}[a)]
+	\item{$n^2$}
+    \item{$n^3$}
+    \item{$100 \, n^2$}
+    \item{$n \; log \, n$}
+    \item{$2^n$}
+\end{enumerate}
+\end{question}
+
+\begin{question}[subtitle={Tardos, ch 2 ex 3}]{20}
+Take the following list of functions and arrange them in ascending order of growth rate. That is, if function g(n) immediately follows function f (n) in your list, then it should be the case that f(n) is O(g(n)).
+
+\begin{enumerate}[a)]
+	\item{$f_1(n) = n^{2.5}$}
+	\item{$f_2(n) = \sqrt[]{2n}$}
+	\item{$f_3(n) = n+10$}
+	\item{$f_4(n) = 10^n$}
+	\item{$f_5(n) = 100^n$}
+	\item{$f_6(n) = n^2 log\; n$}
+\end{enumerate}
+\end{question}
+
+\begin{question}[subtitle={Tardos, ch 2 ex 5}]{30}
+Assume you have functions f and g such that f(n) is O(g(n)). For each of the following statements, decide whether you think it is true or false and give a proof or counterexample.
+
+\begin{enumerate}[a)]
+	\item{$log_2(f(n))$ is $O(log_2(g(n)))$ }
+    \item{$2^{f(n)}$ is $O(2^{g(n)})$}
+    \item{$f(n)^2$ is $O(g(n)^2)$}
+\end{enumerate}
+\end{question}
+
+\end{document}
+
