@@ -626,7 +626,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_stack">1.5. Stack</h3>
-
+<div class="paragraph">
+<p>Stacks support only two operations, push and pop (well, and top, size). Stacks are Last In First Out (LIFO).</p>
+</div>
+<div class="paragraph">
+<p>Implementing a stack is easy, either with a vector or linked list, since insertions and deletions are from the same side (push,pop).</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_queue_circular_queue">1.6. Queue, Circular queue</h3>
@@ -634,7 +639,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_priority_queues_and_heaps">1.7. Priority queues and heaps</h3>
-
+<div class="paragraph">
+<p>Heaps are binary-tree-like structures, where the root is always less (for min heaps) than its two children, but there is no ordering between the children.</p>
+</div>
+<div class="paragraph">
+<p>Heaps are also compact (we fill all the levels first, and we fill leaves in left-to-right order), so they can be stored in an array, with no extra space. The children of node i are node 2*i+1 and 2*i+2 (if we start at 0).</p>
+</div>
 </div>
 </div>
 </div>
@@ -685,7 +695,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-08-20 10:40:15 EDT
+Last updated 2017-08-20 10:49:04 EDT
 </div>
 </div>
 </body>

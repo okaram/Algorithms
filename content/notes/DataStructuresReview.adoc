@@ -62,11 +62,19 @@ Most linked list algorithms can be done without recursion, using while loops; bu
 === Vectors
 Vectors are thin wrappers against arrays; we allocate an array, with extra spaces; keep track of the actual number of elements; if we run out of extra spaces, we need to copy the array.
 
+
 === Stack
+Stacks support only two operations, push and pop (well, and top, size). Stacks are Last In First Out (LIFO).
+
+Implementing a stack is easy, either with a vector or linked list, since insertions and deletions are from the same side (push,pop).
 
 === Queue, Circular queue
 
 === Priority queues and heaps
+
+Heaps are binary-tree-like structures, where the root is always less (for min heaps) than its two children, but there is no ordering between the children. 
+
+Heaps are also compact (we fill all the levels first, and we fill leaves in left-to-right order), so they can be stored in an array, with no extra space. The children of node i are node 2*i+1 and 2*i+2 (if we start at 0).
 
 == Trees
 
