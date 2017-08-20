@@ -30,6 +30,7 @@ Used to implement linear structures (like arrays). Each node contains the actual
 * Insert (at front) - O(1)
 * get - O(n) n being the index
  
+=== Sample code
 [source,java]
 ----
 class LinkedList<T> {
@@ -55,7 +56,7 @@ Most linked list algorithms can be done without recursion, using while loops; bu
     public int size() {
         return nodeSize(head);
     }
----
+----
 
 
 === Vectors
