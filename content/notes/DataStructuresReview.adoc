@@ -12,22 +12,54 @@
     ** Queue
     ** Dequeue
     ** Priority queue is implemented with tree-like structures
-* More complicated ones
-    * Skip lists
 
 === Linked lists
 
+Used to implement linear structures (like arrays). Each node contains the actual data, and a pointer/reference to the next node in the list. The list is just a pointer to the head of the list (the first node).
+
+==== Variations:
+* Single linked list (normal)
+* Doubly linked list (node contains pointer to previous, next)
+    ** Circular - last node points to the head too
+* List could also keep a pointer to last element, to facilitate inserting at the end.
+* Skip lists - keep pointers to elements in the middle, to have logarithmic access time
+
+=== Efficiency
+* Extra memory, one pointer per element 
+* Extra allocations, loses locality of reference
+* Insert (at front) - O(1)
+* get - O(n) n being the index
+ 
 [source,java]
 ----
 class LinkedList<T> {
     private static class Node<T> {
         T data;
-        Node next;
+        Node<T> next;
     }
-    
+    Node<T> head;
 }
 ----
+
+==== aside - recursion
+Most linked list algorithms can be done without recursion, using while loops; but many times recursion makes it easier :). Many tree algorithms use recursion.
+
+[source,java]
+----
+    private static int nodeSize(Node currentHead) {
+        if(currentHead==null)
+            return 0;
+        return 1+nodeSize(currentHead.next);
+    }
+
+    public int size() {
+        return nodeSize(head);
+    }
+---
+
+
 === Vectors
+Vectors are thin wrappers against arrays; we allocate an array, with extra spaces; keep track of the actual number of elements; if we run out of extra spaces, we need to copy the array.
 
 === Stack
 

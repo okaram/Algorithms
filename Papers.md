@@ -24,8 +24,7 @@ Fast and Lean Immutable JVM Collections](https://michael.steindorfer.name/public
 *[Universal hashing](https://en.wikipedia.org/wiki/Universal_hashing)
 ## Others
 
-* [On the Efficiency of Pairing Heaps and Related Data
-Structures](http://www.uqac.ca/azinflou/Fichiers840/EfficiencyPairingHeap.pdf)
+* [On the Efficiency of Pairing Heaps and Related Data Structures](http://www.uqac.ca/azinflou/Fichiers840/EfficiencyPairingHeap.pdf)
 * [Papers by Daniel Sleator](https://www.cs.cmu.edu/~sleator/papers/)
 * [Intro Quantum computing without the physics](https://arxiv.org/abs/1708.03684)
 

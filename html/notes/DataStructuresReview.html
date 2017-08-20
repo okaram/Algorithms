@@ -532,94 +532,118 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </li>
-<li>
-<p>More complicated ones</p>
-</li>
-<li>
-<p>Skip lists</p>
-</li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="_linked_lists">1.1. Linked lists</h3>
+<div class="paragraph">
+<p>Used to implement linear structures (like arrays). Each node contains the actual data, and a pointer/reference to the next node in the list. The list is just a pointer to the head of the list (the first node).</p>
+</div>
+<div class="sect3">
+<h4 id="_variations">1.1.1. Variations:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Single linked list (normal)</p>
+</li>
+<li>
+<p>Doubly linked list (node contains pointer to previous, next)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Circular - last node points to the head too</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List could also keep a pointer to last element, to facilitate inserting at the end.</p>
+</li>
+<li>
+<p>Skip lists - keep pointers to elements in the middle, to have logarithmic access time</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_efficiency">1.2. Efficiency</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Extra memory, one pointer per element</p>
+</li>
+<li>
+<p>Extra allocations, loses locality of reference</p>
+</li>
+<li>
+<p>Insert (at front) - O(1)</p>
+</li>
+<li>
+<p>get - O(n) n being the index</p>
+</li>
+</ul>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">class</span> <span class="tok-nc">LinkedList</span><span class="tok-o">&lt;</span><span class="tok-n">T</span><span class="tok-o">&gt;</span> <span class="tok-o">{</span>
     <span class="tok-kd">private</span> <span class="tok-kd">static</span> <span class="tok-kd">class</span> <span class="tok-nc">Node</span><span class="tok-o">&lt;</span><span class="tok-n">T</span><span class="tok-o">&gt;</span> <span class="tok-o">{</span>
         <span class="tok-n">T</span> <span class="tok-n">data</span><span class="tok-o">;</span>
-        <span class="tok-n">Node</span> <span class="tok-n">next</span><span class="tok-o">;</span>
+        <span class="tok-n">Node</span><span class="tok-o">&lt;</span><span class="tok-n">T</span><span class="tok-o">&gt;</span> <span class="tok-n">next</span><span class="tok-o">;</span>
     <span class="tok-o">}</span>
-
+    <span class="tok-n">Node</span><span class="tok-o">&lt;</span><span class="tok-n">T</span><span class="tok-o">&gt;</span> <span class="tok-n">head</span><span class="tok-o">;</span>
 <span class="tok-o">}</span></code></pre>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_aside_recursion">1.2.1. aside - recursion</h4>
+<div class="paragraph">
+<p>Most linked list algorithms can be done without recursion, using while loops; but many times recursion makes it easier :). Many tree algorithms use recursion.</p>
 </div>
-<div class="sect2">
-<h3 id="_vectors">1.2. Vectors</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java">    <span class="tok-kd">private</span> <span class="tok-kd">static</span> <span class="tok-kt">int</span> <span class="tok-nf">nodeSize</span><span class="tok-o">(</span><span class="tok-n">Node</span> <span class="tok-n">currentHead</span><span class="tok-o">)</span> <span class="tok-o">{</span>
+        <span class="tok-k">if</span><span class="tok-o">(</span><span class="tok-n">currentHead</span><span class="tok-o">==</span><span class="tok-kc">null</span><span class="tok-o">)</span>
+            <span class="tok-k">return</span> <span class="tok-mi">0</span><span class="tok-o">;</span>
+        <span class="tok-k">return</span> <span class="tok-mi">1</span><span class="tok-o">+</span><span class="tok-n">nodeSize</span><span class="tok-o">(</span><span class="tok-n">currentHead</span><span class="tok-o">.</span><span class="tok-na">next</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
 
-</div>
-<div class="sect2">
-<h3 id="_stack">1.3. Stack</h3>
+    <span class="tok-kd">public</span> <span class="tok-kt">int</span> <span class="tok-nf">size</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+        <span class="tok-k">return</span> <span class="tok-n">nodeSize</span><span class="tok-o">(</span><span class="tok-n">head</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">---</span>
 
-</div>
-<div class="sect2">
-<h3 id="_queue_circular_queue">1.4. Queue, Circular queue</h3>
 
-</div>
-<div class="sect2">
-<h3 id="_priority_queues_and_heaps">1.5. Priority queues and heaps</h3>
+<span class="tok-o">===</span> <span class="tok-n">Vectors</span>
+<span class="tok-n">Vectors</span> <span class="tok-n">are</span> <span class="tok-n">thin</span> <span class="tok-n">wrappers</span> <span class="tok-n">against</span> <span class="tok-n">arrays</span><span class="tok-o">;</span> <span class="tok-n">we</span> <span class="tok-n">allocate</span> <span class="tok-n">an</span> <span class="tok-n">array</span><span class="tok-o">,</span> <span class="tok-n">with</span> <span class="tok-n">extra</span> <span class="tok-n">spaces</span><span class="tok-o">;</span> <span class="tok-n">keep</span> <span class="tok-n">track</span> <span class="tok-n">of</span> <span class="tok-n">the</span> <span class="tok-n">actual</span> <span class="tok-n">number</span> <span class="tok-n">of</span> <span class="tok-n">elements</span><span class="tok-o">;</span> <span class="tok-k">if</span> <span class="tok-n">we</span> <span class="tok-n">run</span> <span class="tok-n">out</span> <span class="tok-n">of</span> <span class="tok-n">extra</span> <span class="tok-n">spaces</span><span class="tok-o">,</span> <span class="tok-n">we</span> <span class="tok-n">need</span> <span class="tok-n">to</span> <span class="tok-n">copy</span> <span class="tok-n">the</span> <span class="tok-n">array</span><span class="tok-o">.</span>
 
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_trees">2. Trees</h2>
-<div class="sectionbody">
+<span class="tok-o">===</span> <span class="tok-n">Stack</span>
 
+<span class="tok-o">===</span> <span class="tok-n">Queue</span><span class="tok-o">,</span> <span class="tok-n">Circular</span> <span class="tok-n">queue</span>
+
+<span class="tok-o">===</span> <span class="tok-n">Priority</span> <span class="tok-n">queues</span> <span class="tok-n">and</span> <span class="tok-n">heaps</span>
+
+<span class="tok-o">==</span> <span class="tok-n">Trees</span>
+
+<span class="tok-o">==</span> <span class="tok-n">Searching</span> <span class="tok-n">structures</span>
+
+<span class="tok-o">*</span> <span class="tok-n">Binary</span> <span class="tok-n">Search</span> <span class="tok-n">Trees</span>
+    <span class="tok-o">**</span> <span class="tok-n">Balancing</span>
+        <span class="tok-o">***</span> <span class="tok-mi">2</span><span class="tok-o">-</span><span class="tok-mi">3</span> <span class="tok-n">Trees</span>
+        <span class="tok-o">***</span> <span class="tok-n">Red</span><span class="tok-o">-</span><span class="tok-n">Black</span> <span class="tok-n">Trees</span>
+        <span class="tok-o">***</span> <span class="tok-n">AVL</span> <span class="tok-n">Trees</span>
+<span class="tok-o">*</span> <span class="tok-n">Hash</span> <span class="tok-n">tables</span>
+<span class="tok-o">*</span> <span class="tok-n">Multidimensional</span> <span class="tok-n">trees</span><span class="tok-o">,</span> <span class="tok-n">tables</span></code></pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_searching_structures">3. Searching structures</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Binary Search Trees</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Balancing</p>
-<div class="ulist">
-<ul>
-<li>
-<p>2-3 Trees</p>
-</li>
-<li>
-<p>Red-Black Trees</p>
-</li>
-<li>
-<p>AVL Trees</p>
-</li>
-</ul>
 </div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Hash tables</p>
-</li>
-<li>
-<p>Multidimensional trees, tables</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-08-12 14:55:51 EDT
+Last updated 2017-08-20 10:24:31 EDT
 </div>
 </div>
 </body>
