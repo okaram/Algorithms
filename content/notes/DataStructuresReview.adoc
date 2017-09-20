@@ -87,3 +87,13 @@ Heaps are also compact (we fill all the levels first, and we fill leaves in left
         *** AVL Trees
 * Hash tables
 * Multidimensional trees, tables
+
+== algorithms
+
+* min, max - linear time
+* binary search - log need
+* sorting - n^2, n log need
+
+== sorting algorithms
+
+* insertion sort 
