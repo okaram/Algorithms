@@ -16,7 +16,7 @@ fib(1) = 1
 fib(n)=fib(n-1)+fib(n-2)
 
 ### python code
-```{python}
+```{.py}
 def fibo(n:int)->int:
   if n<=0:
     return 0
